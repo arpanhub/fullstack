@@ -1,0 +1,10 @@
+-> Assignment Operators
+->Comparison Operators
+->Arithmatic Operators
+->Logical Operators
+->String Operators
+->Conditional Operators
+->ConditionalOperators Operators
+->commma Operators
+->unary Operators
+

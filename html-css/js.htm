@@ -1,0 +1,106 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+    <script>       
+/*         let a=Number(prompt("Enter the number 1"));
+        let b=Number(prompt("Enter the number b"));
+        alert("sum="+(a + b));
+        alert("product="+(a * a));
+        alert("division="+(a / b));
+        alert("mod%="+(a % b)); */
+        // let a=prompt("enter the first no.");
+    
+        var price1=Number (prompt("Enter price 1"))
+        var price2=Number (prompt("Enter price 2"))
+        var price3=Number (prompt("Enter price 3"))
+        // document.write("total price="+(price1+price2+(price3)*2))
+        // document.write("averagr price of items="+(price1+price2+(price3)/3))
+        alert("total price="+(price1+price2+(price3)*2))
+        alert("averagr price of items="+((price1+price2+price3)/3))
+        var s=prompt("Enter promo code");
+        if(s=="i got 5 on it"){
+            alert("you saved 5$ in it")
+        }
+        else{
+            alert("invalid coupon code")
+        }
+
+
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*  var year=Number (prompt("Enter year"))
+                if(year%4==0 && year%100!=0|| year%400==0)
+                {
+                    alert("its a leap year dear")
+                }
+                else{
+                    alert("not a leap year");
+                } */
+
+      /* var marks=Number (prompt("Enter marks"))
+                confirm()
+                if(marks>90)
+                {
+                    alert("A")
+                }
+                else if(marks>80 && marks<90)
+                {
+                    alert("B")
+                }
+                else if(marks>70 && marks<80)
+                {
+                    alert("C")
+                }
+                else if(marks>60 && marks<70)
+                {
+                    alert("D")
+                }
+                else
+                {
+                    alert("f")
+                }*/
+      /* var num1=Number (prompt("Enter number 1"))
+                var num2=Number (prompt("Enter number 2"))
+                confirm("okay?")
+                if(num1>num2)
+                    alert(num1+" is bigger")
+                else
+                    alert(num2+" is bigger")
+                 */
+      /* var range= Number(prompt("enter range"))
+                var fact=1;
+                for(var i=1;i<=range;i++){
+                    for(var j=1;j<=i;j++)
+                    {
+                        fact=fact*j;
+                    }
+                    if(i!=5  && i!=7){
+                        document.write(fact+"    ");
+                    }
+                    fact=1;
+                } */
+      function area(a, b) {
+        var area = a * b;
+        document.write(`area is ${area}`);
+      }
+      var a = Number(prompt("Enter number"));
+      var b = Number(prompt("Enter number"));
+      area(a, b);
+    </script>
+  </body>
+</html>

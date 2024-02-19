@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Bubbling Example</title>
+  <style>
+    .ele
+    {
+      padding: 50px;
+      border: 20px solid black;
+    }
+    
+  </style>
+</head>
+<body>
+<form id="myform" class="ele">
+  <div id="main" class="ele">
+    <p id="p1" class="ele">
+    click me  </p>
+  </div>
+  
+</form>
+<script>
+    p1.addEventListener("click",function()
+    {
+      this.style.bordercolor="red"
+    });
+    myform.addEventListener("click",function(){
+      this.style.bordercolor="blue"
+    });
+</script>
+
+</body>
+</html>

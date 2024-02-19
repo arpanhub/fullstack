@@ -1,0 +1,103 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="start()">start</button>
+    <button onclick="stop()">stop</button>
+    <p id="demo"></p>
+    <script>
+        var i;var count=0;
+        function start() {
+            i = setInterval(datetime, 2000);
+        }
+        
+        function datetime()
+        {
+            document.getElementById("demo").innerHTML=new Date();
+            document.getElementById("demo").style.fontSize="70px";
+            document.getElementById("demo").style.color="blue"
+            document.getElementById("demo").style.fontStyle="italic";
+            if (count == 6) {
+                document.getElementById("demo").innerHTML = "TIMEOUT";
+                clearInterval(i);
+            } else {
+                count++;
+            }
+        }
+        function stop()
+        {
+            clearInterval(i);
+        }
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Date on Click</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #dateDisplay {
+            color: blue;
+            font-size: 54px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="showButton" onclick="showDate()">Show Date</button>
+    <button id="stopButton" onclick="stopShowing()">Stop</button>
+    <p id="dateDisplay"></p>
+
+    <script>
+        let clickCount = 0;
+        let intervalId;
+
+        function showDate() {
+            clickCount++;
+
+            if (clickCount === 5) 
+            {
+                displayDate();
+            }
+            else if (clickCount === 6) 
+            {
+                document.getElementById('dateDisplay').innerText = "Error: Clicked 6 times!";
+                document.getElementById('showButton').disabled = true;
+            }
+        }
+
+        function stopShowing() {
+            clearInterval(intervalId);
+            document.getElementById('showButton').disabled = false;
+        }
+
+        function displayDate() {
+            intervalId = setInterval(() => {
+                const currentDate = new Date();
+                const formattedDate = currentDate.toISOString();
+                document.getElementById('dateDisplay').innerText = formattedDate;
+            }, 1000);
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Slideshow</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .button-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .button {
+      background-color: #5167c7; /* Green */
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition-duration: 0.4s;
+    }
+    .button:hover {
+      background-color: #384584;
+    }
+    #slide {
+      max-width: 800%;
+      max-height: 100%;
+      align-items: flex-end;
+    }
+  </style>
+</head>
+<body>
+  <div class="button-container">
+    <button class="button" onclick="start()">Start Slideshow</button><br>
+    <button class="button" onclick="stop()">Stop Slideshow</button><br>
+    <button class="button" onclick="previous()">previous</button><br>
+    <button class="button" onclick="next()">next</button>
+  </div>
+  <img id="slide">
+  <script>
+    var f; // Variable to hold the timeout
+    var i = 0;
+    var images = ['1.jpg', '2.jpg', '1.jpg']; // Image URLs
+
+    // Function to change the image
+    function changeImage() {
+      document.getElementById('slide').src = images[i];
+      if (i < images.length - 1) {
+        i++;
+      } else {
+        i = 0;
+      }
+      f = setTimeout(changeImage, 500);
+    }
+
+    // Start the slideshow
+    function start() {
+      changeImage();
+    }
+
+    // Stop the slideshow
+    function stop() {
+      clearTimeout(f);
+    }
+  </script>
+</body>
+</html>

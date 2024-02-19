@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+
+      form {
+        max-width: 300px;
+        margin: 50px auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      input[type="username"],
+      input[type="password"] {
+        width: calc(100% - 22px);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      button[type="submit"] {
+        width: 100%;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <form
+      id="btn"
+      onsubmit="return validation()"
+      onmouseover="changeColorONMouseOver()"
+      onmouseout="changeColorONMouseOut()"
+    >
+      <h2>Login</h2>
+      <label>Username: <input type="username" id="a" /></label>
+      <p id="b" style="color: red"></p>
+      <label>Password: <input type="password" id="c" /></label>
+      <p id="d" style="color: red"></p>
+      <button type="submit" id="btn" onmouseover="changeColorONMouseOver()"
+      onmouseout="changeColorONMouseOut()">Submit</button>
+      <script>
+        function validation() {
+          if (document.getElementById("a").value == "") {
+            //alert("username ia mandatory")
+            document.getElementById("b").innerHTML = "name required*";
+            // document.getElementById("c").innerHTML="pass required*"
+            event.preventDefault();
+          }
+          if (document.getElementById("c").value == "") {
+            //alert("username ia mandatory")
+            // document.getElementById("b").innerHTML="name required*"
+            document.getElementById("d").innerHTML = "pass required*";
+            event.preventDefault();
+          }
+        }
+        function changeColorONMouseOver() {
+          document.getElementById("btn").style.background = "black";
+          document.getElementById("btn").style.color = "yellow";
+          document.getElementById("btn").style.transform =
+            "rotate(360deg) scale(1.2)";
+          document.getElementById("btn").style.transition = "2s";
+        }
+        function changeColorONMouseOut() {
+          document.getElementById("btn").style.background = "black";
+          document.getElementById("btn").style.color = "white";
+          document.getElementById("btn").style.transform =
+            "rotate(-360deg) scale(1.2)";
+          document.getElementById("btn").style.transition = "2s";
+        }
+      </script>
+    </form>
+
+  </body>
+</html>

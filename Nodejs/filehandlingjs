@@ -1,4 +1,4 @@
-var fs = require("fs")
+/* var fs = require("fs")
 fs.readFile('Input.txt',function(err,data)
 {
     if(err)
@@ -6,4 +6,26 @@ fs.readFile('Input.txt',function(err,data)
         return console.error(err);
     }
     console.log("Asynchronous read: "+data.toString());
-});
+}); */
+//---------------------------------------------------------------------------------
+    /* var http=require('http');
+    var fs=require('fs');
+    http.createServer(function(req,res)
+    {
+        console.log("File is open at localhost:1000");
+        fs.readFile('Input.txt',function(err,data){
+            res.write(data);
+            return res.end();
+        });
+
+    }).listen(1000); */
+    //-------------------------------------------------------------------------
+/* 
+    var fs=require('fs');
+    fs.writeFile('Input1.txt','Adding New content using appendfile Method   !',
+    function(err){
+        if(err)throw err;
+        console.log('Saved!!!');
+    }); */
+
+//=--------------------------------------------------------------------------

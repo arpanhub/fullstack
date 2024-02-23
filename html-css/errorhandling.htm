@@ -1,0 +1,65 @@
+<!--  ERROR HANDLING !! -->
+<!-- 1.try-wrp 
+2.catch
+3.finally block -->
+
+<!DOCTYPE htm>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes blink 
+        {
+            0%, 
+            100% {opacity: 1;}
+            50% {opacity: 0;} 
+        }
+    </style>
+</head>
+<body id="body">
+    <h3>Enter number between 5 to 9</h3>
+    <input id="demo" type="text">
+    <button type="button" onclick="myfunction()">Test Input</button>
+    <p id="p01"></p>
+    <script>
+        function myfunction()
+        {
+            const massage=document.getElementById("p01");
+            massage.innerHTML="";
+            let x= document.getElementById("demo").value;
+
+            try {
+                if(x=="") throw " is empty";
+                if(isNaN(x))throw "is not a number";
+                x=Number(x);
+                if(x>10) throw "its too high";
+                if(x<5) throw "its two low ";
+            }
+            catch(err)
+            {
+                massage.innerHTML="input "+err;
+            }
+            finally
+            {
+                document.getElementById("demo")
+                const body=document.getElementById("body");
+               /*  if(isNaN(x))
+                {
+                    body.style.background="red";
+                } */
+                if(x>10 || x< 5)
+                {
+                    body.style.background= "red";
+                }
+                else{
+                    body.style.background="green";
+                }
+            }
+        }
+    </script>
+    
+</body>
+</html>
+

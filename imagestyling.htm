@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <style type="text/css">
+
+        </style>
+    </head>
+    <body>
+        <img id="mainImage" style="border:3px solid grey" src="1.jpg" height="500px" width="540px"><br>
+        <img id="divId" onclick="" src="" alt="">
+        <script>
+            function changeImageOnclick()
+            {
+                if(x.tagvalue="IMG")
+                {
+                    a=x.getAttribute(src);
+                    document.getElementById("mainImage").setAttribute("src",a);
+                }
+            }
+            function f1()
+            {
+                x=event.target;
+                x.style.cursor="pointer";
+                x.style.borderColor = "red";
+            }
+            function f2()
+            {
+                x=event.target;
+                x.style.borderColor = "grey";
+            }
+        </script>
+    </body>
+</html>

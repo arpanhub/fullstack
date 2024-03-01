@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Username Reversal</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="usernameForm">
+      <label for="username">Enter your username:</label>
+      <input type="text" id="username" name="username" />
+      <input type="submit" value="Reverse Username" />
+    </form>
+    <p id="result"></p>
+
+    <script>
+      /* (event) {
+        //event.preventDefault();
+        var username = document.getElementById('username').value;
+    } */
+      /* function reverseString() {
+        var username = document.getElementById("");
+        var username = document.getElementById("usernameForm");
+        var usernameValue = username.valuel;
+
+        /* document.getElementById('usernameForm').addEventListener('submit', function
+        return str.split('').reverse().join(''); */
+       /*  var reversedUsername = usernameValue.split("").reverse().join("");
+        var resultElement = document.getElementById("result");
+        resultElement.textContent = "Reversed String:" + reversedUsername;
+      } */ 
+      document
+        .getElementById("usernameForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          var username = document.getElementById("username").value;
+          var reversedUsername = reverseString(username);
+          var resultElement = document.getElementById("result");
+          resultElement.textContent = "Reversed String: " + reversedUsername;
+        });
+
+      function reverseString(str) {
+        return str.split("").reverse().join("");
+      }
+    </script>
+  </body>
+</html>

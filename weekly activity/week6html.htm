@@ -1,0 +1,59 @@
+<!-- //build a basic thumbnails gallery Let allow user to view larger images when clicking on thermals. The task will help you practice dom manipulation, even even titling and creating interactive user interfaces. 
+Write a javascript function that performs a simple arithmetic operation, but it's grown to errors such as division by zero or invalid input. Implement error handling mechanism using trial cache block to handle potential error gracefully. -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Thumbnail Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 100px;
+    }
+    .thumbnail {
+      width:150px;
+      height: auto;
+      margin: 5px;
+      cursor: pointer;
+    }
+    .thumbnail:hover {
+      opacity: 0.7;
+    }
+    #largeImage {
+      max-width: 100%;
+      max-height: 150vh;
+      border: 2px solid #5167c7;
+      border-radius: 12px;
+      padding-top:0px ;
+    }
+  </style>
+</head>
+<body>
+  <div id="thumbnails">
+    <!-- Thumbnails -->
+    <img class="thumbnail" src="car1.jpg" onclick="showImage(0)">
+    <img class="thumbnail" src="car2.jpg" onclick="showImage(1)">
+    <img class="thumbnail" src="car3.jpg" onclick="showImage(2)">
+    <img class="thumbnail" src="car4.jpg" onclick="showImage(3)">
+    <img class="thumbnail" src="car5.jpg" onclick="showImage(4)">
+  </div>
+  
+  <!-- Large Image Container -->
+  <div id="largeImageContainer">
+    <img id="largeImage">
+  </div>
+
+  <script>
+    var images = ['car1.jpg', 'car2.jpg', 'car3.jpg', 'car4.jpg', 'car5.jpg']; // Image URLs
+
+    // Function to show the selected image
+    function showImage(index) {
+      var largeImage = document.getElementById('largeImage');
+      largeImage.src = images[index];
+    }
+  </script>
+</body>
+</html>

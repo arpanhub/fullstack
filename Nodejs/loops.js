@@ -12,7 +12,7 @@ function a(){
     console.log("hi");
 } */
 //------------------------------------------------------------
-/* var id1=setInterval(countdown,1000);
+var id1=setInterval(countdown,1000);
 function countdown(fromnumber){
         console.log(fromnumber);
     let nextnumber=fromnumber-1;
@@ -21,11 +21,11 @@ function countdown(fromnumber){
     }
     countdown(10);
 }
- */
+
 //---------------------------------------
 
-
-/* function welcome(){
+/* 
+function welcome(){
     console.log("welcome to timer code set timeout");
 }
 function welcome1(){
@@ -41,8 +41,8 @@ clearTimeout(id1);
 clearInterval(id2); */
 
 //------------------------------------------------------
-//setInterval
-/* function countdown(fromnumber){
+/* //setInterval
+function countdown(fromnumber){
     console.log(fromnumber);
     let intervalid=setInterval(function(){
         fromnumber--;
@@ -114,7 +114,7 @@ function printMultiplicationTable(number) {
 } */
 
 //arrays-----------------------
-const x=['a','b','c',null,1,2,3,true,10.8];
+/* const x=['a','b','c',null,1,2,3,true,10.8];
 for(y of x){
-    console.log((x));
-}
+    console.log((y));
+} */

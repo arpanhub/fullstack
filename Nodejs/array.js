@@ -20,7 +20,7 @@ console.log(subject.length);
 subject[3]='Angular Js';
 console.log(subject);
 */
-/* 
+
  var array_1=[1,2,3,4,5]
 array_1.forEach(function(num,i){
     array_1[i] **=array_1[i];
@@ -30,7 +30,7 @@ for(i=0;i<5;i++)
 {
     array_1[i] =array_1[i]*array_1[i];
 }
-console.log(array_1); */
+console.log(array_1);
 /* var items=['david','john','michael','reeta'];
 console.log(items.pop());
 console.log(items.pop());

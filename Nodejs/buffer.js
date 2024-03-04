@@ -60,9 +60,23 @@ console.log(buff.includes('a'));
  */
 
 //copying buffer
-var buffer1=Buffer.from("this is Nodejs");
+/* var buffer1=Buffer.from("this is Nodejs");
 var buffer2=Buffer.alloc(15);
 buffer1.copy(buffer2);
 console.log(buffer2);
+<<<<<<< HEAD
+console.log(buffer1); */
+
+//concatenation
+/* var buffer1=Buffer.from("this is Nodejs");
+var buffer2=Buffer.from("this is also Nodejs");
+var buffer3=Buffer.concat([buffer1,buffer2],90);
+console.log(buffer3.toString()); */
+
+//buffer allocation and fill codes
+const buf1=Buffer.alloc(26).fill("arpangupta");
+const buf2=Buffer.from(10);
+=======
 console.log(buffer1);
 >>>>>>> aeda26237cd40c83ac92abfe8c36e9fddfd9828c
+>>>>>>> origin/main

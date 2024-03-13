@@ -7,9 +7,48 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
-        <script src="script.js"></script>
+<!-- <h1>This is first paragraph.</h1> -->
+<div class="1">
+    <!-- <p>yeah Buddy..........</p> -->
+    <!-- <button>Click me</button> -->
+</div>
+<hr>
+<div class="2">
+    <button class="red">red</button>
+    <button class="black">black</button><br>
+    <button class="blue">blue</button>
+</div>
+<hr>
+<div class="3">
+    <img src="car1.jpg" alt="Porsche"><br>  
+    <button>Click me</button>
+</div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- <script src="script.js"></script> -->
+<script>
+        $(document).ready(function () 
+        {
+        $("div.1").prepend('<input type="text" id="newText" />');
+        $("div.1 button").text("Submit");
     
+
+        $("div.2 .red").click(function () {
+        $("body").css("background-color", "red");
+        });
+
+        $("div.2 .black").click(function () {
+        $("body").css("background-color", "black");
+        });
+
+        $("div.2 .blue").click(function () {
+        $("body").css("background-color", "blue");
+        });
+    
+        $("div.3 button").click(function () {
+        $("div.3 img").fadeOut();
+        });
+        });
+</script>
+        
 </body>
 </html>

@@ -35,3 +35,6 @@ else{
 setTimeout(function() {
   clearInterval(c);
 }, 10000);  
+
+var event = require('events');
+var myEmitter= new event.EventEmitter();

@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^4.18.3"
+  },
+  "name": "express",
+  "version": "1.0.0",
+  "description": "express",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arpanhub/fullstack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arpanhub/fullstack/issues"
+  },
+  "homepage": "https://github.com/arpanhub/fullstack#readme"
+}

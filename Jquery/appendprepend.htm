@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .left {
+        display: inline-block;
+        margin-right: 60px; 
+    }
+
+      .right {
+        display: inline-block;
+      }
+      .left1 {
+        display: inline-block;
+        margin-right: 220px; 
+      }
+
+      .right1 {
+        display: inline-block;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #000000; 
+        color: white; 
+        border: none; 
+        border-radius: 5px;
+        cursor: pointer; 
+        margin: 5px;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#bt1").click(function () {
+          $("#p1").prepend("<img src='car1.jpg'><br>");
+        });
+        $("#bt2").click(function () {
+          $("#p2").append("<img src='car4.jpg'><br>");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Prepend and append working</h1>
+    <p id="p1" class="left"></p>
+    <p id="p2" class="right"></p>
+    <br /><button id="bt1" class="left1">prepend</button>
+    <button id="bt2" class="right1">append</button>
+  </body>
+</html>

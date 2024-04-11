@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semester Results</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 20px auto;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+
+    .sem1, .sem2, .sem3 {
+      display: none; /* Hide all semester results initially */
+    }
+  </style>
+</head>
+<body>
+   <thead>
+      <tr>
+        <th scope="col">Subject</th>
+        <th scope="col">Marks</th>
+        <th scope="col">Grade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="sem1">
+        <td>Mathematics</td>
+        <td><span id="sem1Subject1Marks">85</span></td>
+        <td><span id="sem1Subject1Grade">A</span></td>
+      </tr>
+      <tr class="sem1">
+        <td>Physics</td>
+        <td><span id="sem1Subject2Marks">78</span></td>
+        <td><span id="sem1Subject2Grade">B</span></td>
+      </tr>
+      <tr class="sem1">
+        <td>Chemistry</td>
+        <td><span id="sem1Subject3Marks">90</span></td>
+        <td><span id="sem1Subject3Grade">A</span></td>
+      </tr>
+      <tr class="sem1">
+        <td>English</td>
+        <td><span id="sem1Subject4Marks">82</span></td>
+        <td><span id="sem1Subject4Grade">B</span></td>
+      </tr>
+      <tr class="sem1">
+        <td>Computer Science</td>
+        <td><span id="sem1Subject5Marks">88</span></td>
+        <td><span id="sem1Subject5Grade">A</span></td>
+      </tr>
+      <tr class="sem1">
+        <th colspan="2">CGPA</th>
+        <td colspan="1"><span id="sem1CGPA">8.4</span></td>
+      </tr>
+
+      <tr class="sem2">
+        <td>Mathematics</td>
+        <td><span id="sem2Subject1Marks">80</span></td>
+        <td><span id="sem2Subject1Grade">B</span></td>
+      </tr>
+      <tr class="sem2">
+        <td>Physics</td>
+        <td><span id="sem2Subject2Marks">85</span></td>
+        <td><span id="sem2Subject2Grade">A</span></td>
+      </tr>
+      <tr class="sem2">
+        <td>Chemistry</td>
+        <td><span id="sem2Subject3Marks">75</span></td>
+        <td><span id="sem2Subject3Grade">B</span></td>
+      </tr>
+      <tr class="sem2">
+        <td>English</td>
+        <td><span id="sem2Subject4Marks">89</span></td>        
+        <td><span id="sem2Subject4Grade">A</span></td>
+      </tr>
+      <tr class="sem2">
+        <td>Economics</td>
+        <td><span id="sem2Subject5Marks">78</span></td>   
+        <td><span id="sem2Subject5Grade">B</span></td>
+      </tr>
+      <tr class="sem2">
+        <th colspan="2">CGPA</th>
+        <td colspan="1"><span id="sem2CGPA">8.1</span></td>
+      </tr>
+
+      <tr class="sem3">
+        <td>Mathematics</td>
+        <td><span id="sem3Subject1Marks">72</span></td>
+        <td><span id="sem
+
+    </tbody>
+  </table>
+
+  <script>
+    const sem1Button = document.getElementById("sem1Button");
+    const sem2Button = document.getElementById("sem2Button");
+    const sem3Button = document.getElementById("sem3Button");
+    const resultTable = document.getElementById("resultTable");
+
+    sem1Button.addEventListener("click", function() {
+      showSemesterResults("sem1");
+    });
+
+    sem2Button.addEventListener("click", function() {
+      showSemesterResults("sem2");
+    });
+
+    sem3Button.addEventListener("click", function() {
+      showSemesterResults("sem3");
+    });
+
+    function showSemesterResults(semester) {
+      const allSemesters = resultTable.querySelectorAll("tr");
+      for (const row of allSemesters) {
+        row.classList.remove("active");
+      }
+      const selectedSemester = resultTable.querySelectorAll(`.${semester}`);
+      for (const row of selectedSemester) {
+        row.classList.add("active");
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- CSS specifically for the form section -->
+    <style>
+        /* CSS for form section only */
+        .form-container {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            width: 50%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">Arpan's Portfolio</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a href="http://127.0.0.1:5500/express/result.htm">Result</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Aim</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <section id="header" class="jumbotron text-center">
+        <div class="container">
+          <h1 class="display-4">Welcome to My Portfolio</h1>
+          <p class="lead">This is a simple portfolio template built with jQuery and Bootstrap.</p>
+        </div>
+    </section>
+<section id="portfolio" class="container">
+  <h2 class="text-center mb-4">Portfolio</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div href="https://sushiladevitrust.com/" class="card">
+        <!-- <a href="https://sushiladevitrust.com/">
+            <img src="logosgct.png" class="card-img-top" alt="Project 1">
+        </a> -->
+        <div class="card-body">
+          <h5 class="card-title">Project 1</h5>
+          <p class="card-text">NGO</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <!-- <a href="https://sushiladevitrust.com/">
+            <img src="graminvikas.png
+            " class="card-img-top" alt="Project 1">
+        </a> -->
+        <div class="card-body">
+          <h5 class="card-title">Project 2</h5>
+          <p class="card-text">Local Events.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <!-- <a href="https://sushiladevitrust.com/">
+            <img src="Picsart_22-08-06_11-48-58-463-1.png" class="card-img-top" alt="Project 1"> -->
+        </a>        <div class="card-body">
+          <h5 class="card-title">Project 3</h5>
+          <p class="card-text">Finance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Form Section -->
+    <br><div class="form-container">
+        <h2>Contact Me</h2>
+        <form action="http://127.0.0.1:1000/submit" method="GET">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name.." required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email.." required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write something.." style="height:200px" required></textarea>
+
+            <input type="submit" value="Submit">
+            <input type="submit" value="See entries">
+        </form>
+    </div>
+</body>
+</html>
